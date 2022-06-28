@@ -12,7 +12,6 @@
   <packaging>war</packaging>
 
   <name>co2WebApp Maven Webapp</name>
-  <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
   <!-- http://localhost:8080/co2WebApp/ -->
 
@@ -29,15 +28,11 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-    
-    
-	<!--
     <dependency>
-      <groupId>org.jboss.weld.servlet</groupId>
-      <artifactId>weld-servlet-core</artifactId>
-      <version>4.0.2.Final</version>
+      <groupId>jakarta.enterprise</groupId>
+      <artifactId>jakarta.enterprise.cdi-api</artifactId>
+      <version>3.0.0</version>
     </dependency>
-    -->
     
   </dependencies>
 
@@ -73,6 +68,11 @@
         <plugin>
           <artifactId>maven-deploy-plugin</artifactId>
           <version>2.8.2</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.tomcat.maven</groupId>
+          <artifactId>tomcat10-maven-plugin</artifactId>
+          <version>10</version>
         </plugin>
       </plugins>
     </pluginManagement>
