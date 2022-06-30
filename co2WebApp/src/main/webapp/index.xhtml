@@ -3,12 +3,23 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-  <link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
+  <link rel="stylesheet" type="text/css" href="css.css"/>
   <title>CO2-Emissionsübersicht</title>
 </h:head>
 <h:body>
-	<!--  <h:inputText value="XXX" /> -->
-	<h:outputText value="ASD"/>
-	<h:outputText value="#{anschrift.name}"/>
+	<!--  <h:outputText value="XXX" /> -->
+	<h1>CO2-Emissionsübersicht</h1>
+	
+	<h:dataTable var="land" value="#{auflistung.staatenArray}">
+		<h:column>
+			<f:facet name="header">Staat</f:facet>
+			<h:outputText value="#{land.laenderName}"/>
+		</h:column>
+		 <h:column>
+		 	<f:facet name="header">Co2-Wert</f:facet>
+		 	<h:outputText value="#{land.co2wert}"/>
+	 	</h:column>
+ 	</h:dataTable>
+	
 </h:body>
 </html>
