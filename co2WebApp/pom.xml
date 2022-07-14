@@ -29,7 +29,31 @@
       <version>4.0.0-M1</version>
     </dependency>
     
+    
+    <dependency>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
+      <version>5.0.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>jakarta.inject</groupId>
+      <artifactId>jakarta.inject-api</artifactId>
+      <version>2.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.weld.servlet</groupId>
+      <artifactId>weld-servlet-core</artifactId>
+      <version>4.0.2.Final</version>
+    </dependency>
+	<dependency>
+		<groupId>org.primefaces</groupId>
+		<artifactId>primefaces</artifactId>
+		<version>11.0.0</version>
+		<classifier>jakarta</classifier>
+	</dependency>
   </dependencies>
+	
 
   <build>
     <finalName>co2WebApp</finalName>

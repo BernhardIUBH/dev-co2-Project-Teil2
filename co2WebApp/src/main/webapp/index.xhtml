@@ -1,11 +1,29 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-  <link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
-  <title>CO2-Emissionsübersicht</title>
+	<link rel="stylesheet" type="text/css" href="css/css.css"/>
+	<!-- <h:outputStylesheet library="css" name="css/css.css"  />-->
+  	<title>CO2-Emissionsübersicht</title>
 </h:head>
 <h:body>
+
+	<div class="wrapper">
+		<div class="box_title">
+			<p class="title">CO2-Emissionsübersicht</p>
+		</div>
+		<div class="box_main">
+	        <p:dataTable var="entries" value="#{overview.listEntries}" rowKey="#{entries.id}">
+	            <p:column headerText="Land">
+	                <p><h:outputText value="#{entries.laenderName}" /></p>
+	            </p:column>
+	            <p:column headerText="Co2-Wert 2019 (kt)">
+	                <p><h:outputText value="#{entries.co2Wert2019}" /></p>
+	            </p:column>
+	        </p:dataTable>
+    	</div>
+    </div>
 </h:body>
 </html>
