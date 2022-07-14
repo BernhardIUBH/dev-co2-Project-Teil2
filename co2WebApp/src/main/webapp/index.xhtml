@@ -1,25 +1,22 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-  <link rel="stylesheet" type="text/css" href="css.css"/>
-  <title>CO2-Emissionsübersicht</title>
+	<link rel="stylesheet" type="text/css" href="css/css.css"/>
+	<!-- <h:outputStylesheet library="css" name="css/css.css"  />-->
+  	<title>CO2-Emissionsübersicht</title>
 </h:head>
 <h:body>
-	<!--  <h:outputText value="XXX" /> -->
-	<h1>CO2-Emissionsübersicht</h1>
-	
-	<h:dataTable var="land" value="#{auflistung.staatenArray}">
-		<h:column>
-			<f:facet name="header">Staat</f:facet>
-			<h:outputText value="#{land.laenderName}"/>
-		</h:column>
-		 <h:column>
-		 	<f:facet name="header">Co2-Wert</f:facet>
-		 	<h:outputText value="#{land.co2wert}"/>
-	 	</h:column>
- 	</h:dataTable>
-	
+
+	<div class="wrapper">
+		<div class="box_title">
+			<p class="title">CO2-Emissionsübersicht</p>
+		</div>
+		<div class="box_main">
+			
+    	</div>
+    </div>
 </h:body>
 </html>

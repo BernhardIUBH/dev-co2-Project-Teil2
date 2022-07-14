@@ -1,0 +1,59 @@
+*			{margin:0px;padding:0px;}
+
+body		{
+			background:
+			url(../Images/footprint160.png) no-repeat right top 40px,
+			url(../Images/airplane.png) no-repeat left top 40px,
+			url(../Images/chimney.png) no-repeat right bottom 40px,
+			url(../Images/background_image.jpg) no-repeat bottom
+			;
+			background-color: #b2d240;
+			display: flex;		
+			justify-content: center; 
+			}
+
+.wrapper 	{
+			justify-content: center;
+			flex-direction: column;
+			margin-top:30px;
+			}
+
+.box_title	{
+			background-color: #000;
+			border: 3px solid #FFF;
+			border-radius: 30px;
+			opacity: .75;
+			width: 800px;
+			height: 80px;
+			padding: 0px 30px 5px 30px;
+			margin:20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			}
+
+.box_main	{
+			background-color: #000;
+			border: 3px solid #FFF;
+			border-radius: 30px;
+			opacity: .75;
+			width: 800px;
+			padding:30px;
+			margin:20px;
+			color:#FFF;
+			}
+			
+p			{
+			font-family:verdana;
+			font-size:16px;
+			color:#000;
+			}
+
+p.title		{font-size:32px;
+			font-weight:bold;
+			color:#FFF;
+			}
+			
+			
+			/* 
+.ui-datatable ui-widget {background-color:#000;} */
