@@ -12,15 +12,18 @@ import java.util.List;
 public class EntryBean implements Serializable{
     private List<Entry> filteredListEntries;
 
-    public List<Entry> getFilteredListEntries() {
+    public void setFilteredListEntries(List<Entry> filteredListEntries)
+    {
+        this.filteredListEntries = filteredListEntries;
+    }
+    
+    public List<Entry> getFilteredListEntries()
+    {
         return filteredListEntries;
     }
 
-    public void setFilteredListEntries(List<Entry> filteredListEntries) {
-        this.filteredListEntries = filteredListEntries;
-    }
-
-    public List<String> getListCountries(){
+    public List<String> getListCountries()
+    {
         return EntryFilter.INSTANCE.getListCountries();
     }
 }
