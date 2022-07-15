@@ -10,9 +10,7 @@ import jakarta.inject.Named;
 @ApplicationScoped
 public class Overview implements Serializable
 {
-    private static Overview instance = new Overview();
-
-    private List<Entry> listEntries = new ArrayList<Entry>();
+    private ArrayList<Entry> listEntries = new ArrayList<Entry>();
 
     public Overview()
     {
@@ -207,11 +205,6 @@ public class Overview implements Serializable
     	listEntries.add(new Entry(188,"Zentralafrikanische Republik",150,140,150,160,160,160,170,170,230,240,240,250,250,230,230,220,230,240,170,170,170,190,200,120,130,190,210,220,230,240));	
     	listEntries.add(new Entry(189,"Zypern",4590,5110,5480,5740,5980,5850,6210,6300,6610,6870,7130,6990,7170,7830,7780,7900,8000,8310,8490,8280,7900,7630,7100,6430,6810,6850,7220,7360,7200,7190));	
 
-    }
-
-    public static Overview getInstance()
-    {
-        return instance;
     }
 
     public List<Entry> getListEntries()
