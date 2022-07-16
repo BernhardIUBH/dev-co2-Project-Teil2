@@ -2,13 +2,14 @@
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.context.RequestScoped;
+import jakarta.faces.view.ViewScoped;
 import jakarta.inject.Named;
 
 import java.io.Serializable;
 import java.util.List;
 
 @Named
-@ApplicationScoped		//Wichtig - Da bei reinem RequestScope die korrekte ID in der rowExpansion nicht weitergegeben wird
+@ViewScoped
 public class EntryBean implements Serializable{
     private List<Entry> filteredListEntries;
 

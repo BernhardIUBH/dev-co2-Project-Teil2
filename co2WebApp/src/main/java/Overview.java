@@ -7,7 +7,7 @@ import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Named;
 
 @Named
-@ApplicationScoped
+@RequestScoped
 public class Overview implements Serializable
 {
     private static Overview instance = new Overview();

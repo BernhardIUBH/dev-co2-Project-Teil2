@@ -12,11 +12,11 @@ public class ChartBean implements Serializable {
     private LineChartModel lineModel1;
     
     public LineChartModel lineModel(int id) {
-    	createLineModels(id);
+    	createLineModel(id);
         return lineModel1;
     }
 
-    private void createLineModels(int id) {
+    private void createLineModel(int id) {
         lineModel1 = initLinearModel(id);
     }
 
