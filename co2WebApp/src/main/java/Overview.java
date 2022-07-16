@@ -4,10 +4,11 @@ import java.util.List;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.context.RequestScoped;
+import jakarta.faces.view.ViewScoped;
 import jakarta.inject.Named;
 
 @Named
-@RequestScoped
+@ViewScoped
 public class Overview implements Serializable
 {
     private static Overview instance = new Overview();
