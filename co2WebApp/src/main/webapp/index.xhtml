@@ -15,14 +15,28 @@
 			<p class="title">CO2-Emissionsübersicht</p>
 		</div>
 		<div class="box_main">
-	        <p:dataTable var="entries" value="#{overview.listEntries}" rowKey="#{entries.id}">
-	            <p:column headerText="Land">
-	                <p><h:outputText value="#{entries.laenderName}" /></p>
-	            </p:column>
-	            <p:column headerText="Co2-Wert 2019 (kt)">
-	                <p><h:outputText value="#{entries.co2Wert2019}" /></p>
-	            </p:column>
-	        </p:dataTable>
+			<h:form>
+				<p:dataTable var="entries" value="#{overview.listEntries}" rowKey="#{entries.id}" widgetVar="filterdEntriesWidged" filteredValue="#{entryBean.filteredListEntries}" >
+					<p:column style="width:8rem">
+						<p:rowToggler/>
+					</p:column>
+					<p:column headerText="Land" sortBy="#{entries.laenderName}" sortOrder="ascending" filterMatchMode="exact" filterBy="#{entries.laenderName}">
+						<f:facet name="filter">
+							<p:selectOneMenu onchange="PF('filterdEntriesWidged').filter()" >
+								<f:selectItem itemLabel="Alle Länder" itemValue="#{null}" noSelectionOption="true" />
+								<f:selectItems value="#{entryBean.listCountries}" />
+							</p:selectOneMenu>
+						</f:facet>
+						<p><h:outputText value="#{entries.laenderName}" /></p>
+					</p:column>
+						<p:column headerText="Co2-Wert 2019 (kt)" sortBy="#{entries.co2Wert2019}">
+						<p><h:outputText value="#{entries.co2Wert2019}" /></p>
+					</p:column>
+					<p:rowExpansion>
+						<p:chart type="line" model="#{chartBean.lineModel(entries.id)}" style="height:400px;"/>
+					</p:rowExpansion>
+				</p:dataTable>
+	        </h:form>
     	</div>
     </div>
 </h:body>
